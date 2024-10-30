@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarme Israel | Graphic Designer & Web Developer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Custom Styles */
+        body {
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        /* Navbar */
+        .navbar {
+            justify-content: center;
+            color: black;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        
+        
+        .background-contain {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-image: url('2.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            overflow: hidden; /* Hide overflowing content */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 500px;
+            background-color: rgb(0, 0, 0, 0.7); /* Adjust opacity and color */
+        }
+
+         /* Text section */
+        .looping-text {
+            position: absolute;
+            left: 20px;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+            opacity: 0; /* Start hidden */
+            transition: opacity 2.5s ease-in-out; /* Smooth transition */
+            z-index: 1;
+        }
+
+        .visible {
+            opacity: 1; /* Show the text */
+        }
+
+        
+    
+
+        /* About Section */
+        .about {
+            padding: 4rem 2rem;
+        }
+
+        /* Service Section */
+        .service-card {
+            transition: box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Projects Section */
+        .project-card {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Skills Section */
+        .skill-btn {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            margin: 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        .skill-btn i {
+            margin-right: 0.5rem;
+        }
+
+        .skill-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Dark mode */
+        .dark-mode {
+            background-color: #222;
+            color: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            padding: 1.5rem 0;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        /* Chart section */
+        #chartSection {
+            margin-top: 50px;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        .custom-container {
+            text-align: center;
+            margin: 1rem;
+            padding: 2rem;
+            border: 1px solid #ddd;
+            border-radius: 40px 0px 40px 0px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 250px;
+            max-width: 30%;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .custom-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 30px;
+            margin-bottom: 1rem;
+        }
+        .custom-container:hover {
+            transform: translateY(-30px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top"  style="background-color: rgb(255, 253, 253);" >
+        <a class="navbar-brand" href="#">
+            <img src="LOGO.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-top">
+        </a>
+        <a class="navbar-brand" href="#">Quarme Israel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" style="justify-content: flex-end;" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#about" style="color: black; font-weight: bolder;">ABOUT</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services" style="color: black; font-weight: bolder;">SERVICES</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects" style="color: black; font-weight: bolder;">PROJECTS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills" style="color: black; font-weight: bolder;">SKILLS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#vlogs" style="color: black; font-weight: bolder;">VLOGS</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.google.com/search?q=belykweb+solutions&rlz=1C1JZAP_enGH1091GH1091&oq=b&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIGCAEQRRhAMgYIAhBFGDkyBggDECMYJzIGCAQQRRg8MgYIBRBFGDwyBggGEEUYPTIGCAcQRRg80gEIMTM3MWowajSoAgCwAgE&sourceid=chrome&ie=UTF-8" style="color: black; font-weight: bolder;">OUR PROFILE</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact" style="color: black; font-weight: bolder;">CONTACT US</a></li>
+                
+            </ul>
+        </div>
+        <div style="margin-left: 1.5%;">
+            <button class="btn btn-outline-secondary ms-3" onclick="toggleDarkMode()" style="background-color: aquamarine;"><i class="fas fa-moon"></i></button>
+        </div>
+        
+    </nav>
+
+<div class="background-contain">
+    <!-- Looping text on the left side -->
+    <div class="looping-text" id="text1">
+        <h2 style="color: rgb(255, 196, 0);">Welcome to Quarme Israel's Website</h2>
+        <p>Our mission is to create visually stunning<br> and highly functional websites that 
+            enhance<br> your online presence and drive engagement
+        </p>
+    </div>
+    <div class="looping-text" id="text2">
+        <h2 style="color: rgb(255, 230, 0);">Web Development | Graphic Design</h2>
+        <p>Mr. Israel specialize in providing<br>
+            top-notch web development and graphic design<br>
+            services tailored to meet the unique needs<br> of our clients</p>
+    </div>
+    <div class="looping-text" id="text3">
+       <h2 style="color: rgb(255, 238, 0);">Explore our Services |  Projects</h2> 
+       <p>We design Business websites, an eye-catching<br>
+         portfolio, an innovative E-commerce platform,<br>
+         Designing & Printing Services, etc......
+    </p>
+    </div>
+</div>
+
+<script>
+    const texts = [
+        document.getElementById('text1'),
+        document.getElementById('text2'),
+        document.getElementById('text3'),
+    ];
+
+    let currentIndex = 0;
+
+    function showNextText() {
+        // Hide all texts
+        texts.forEach((text, index) => {
+            text.classList.remove('visible');
+        });
+
+        // Show the current text
+        texts[currentIndex].classList.add('visible');
+
+        // Move to the next text
+        currentIndex = (currentIndex + 1) % texts.length; // Loop back to the first text after the last
+    }
+
+    // Show the first text immediately
+    showNextText();
+
+    // Change text every 8 seconds
+    setInterval(showNextText, 8000);
+</script>
+    
+
+    <!-- About Section -->
+    <div id="about" class="about container">
+        <div class="overlay"></div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="custom-container">
+                    <img src="my image.jpg" alt="Description of Image 1" width="1500px"> <!-- Replace with your image -->
+                    <a href=" https://wa.me/+233598296093" class="btn btn-primary" target="_blank">Let's Chart</a>
+                </div>
+            </div>
+            <div class="col-md-8 d-flex align-items-center">
+                
+                <p style="font-size: 20px; font-weight: 10px;"><b style="color: red;">Quarme Israel</b> 
+                    is a dynamic and talented young man based in Accra, 
+                    currently in his final year as a Computer Science student at Accra Technical University.
+                     With a passion for creativity and technology, he has established himself as a proficient
+                    graphic designer and web developer. His skills extend into the digital marketing realm, 
+                    where he expertly manages Google Business Profiles and creates compelling online presences 
+                    for various businesses.<br><br>
+
+                    In addition to his tech-savvy skills, Quarme is a vlogger who shares insights and knowledge about the
+                    industry, making complex concepts accessible to a broader audience. He offers general printing and branding 
+                    services, helping clients create memorable visual identities. Driven by a desire to empower others, 
+                    he conducts master classes in IT, sharing his expertise and inspiring the next generation of tech 
+                    enthusiasts. With a blend of creativity, technical skills, and a commitment to education, 
+                    Quarme Israel is poised to make a significant impact in the digital landscape
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="container">
+        <h2 class="text-center">My Services </h2>
+        <div class="flex-container">
+            <div class="custom-container">
+                <img src="services/graphic.jpg" alt="Description of Image 1" width="110"> <!-- Replace with your image -->
+                <h4>Graphic Design</h4>
+                <p> Logo design  |
+                    Branding materials (business cards, brochures, flyers)  |
+                    Social media graphics  |
+                    Digital and print designs</p>
+                <a href="#" class="btn btn-primary">View More</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="services/webdev.jpg" alt="Description of Image 2" width="150"> <!-- Replace with your image -->
+                <h4>Web Development</h4>
+                <p> Website design and development |<br> 
+                    E-commerce solutions  |
+                    Responsive design for mobile devices  |<br>
+                    Website maintenance and updates</p>
+                <a href="#" class="btn btn-primary">Book a Service</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="services/digital-marketing.avif" alt="Description of Image 3" width="100"> <!-- Replace with your image -->
+                <h4>Digital Marketing</h4>
+                <p> Social media management  |
+                    Content creation and strategy  |
+                    Search engine optimization (SEO)  |
+                    Email marketing campaigns</p>
+                <a href="#" class="btn btn-primary">Book a Service</a>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="custom-container">
+                
+                <img src="services/gn-printing.jpg" alt="Description of Image 1" width="100"> <!-- Replace with your image -->
+                <h4>General Printing</h4>
+                <p>
+                    |  Business cards  |
+                    Flyers and brochures  |
+                    Banners and signage  |
+                    Custom printing solutions  |<br>
+                    Binding services  |  Laminating |<br>
+                    Picture Framing   | 
+                </p>
+                <a href="#" class="btn btn-primary">Book a service</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="services/Google-Business-Profile.png" alt="Description of Image 2" width="110"> <!-- Replace with your image -->
+                <h4>Google Business Profile</h4>
+                <p>
+                    Setup and optimization of <br>Google Business Profiles  |<br>
+                    Regular updates and maintenance  |
+                    Customer engagement through Google My Business
+                </p>
+                <a href="#" class="btn btn-primary">View Profile</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="services/IT-Training.jpg" alt="Description of Image 3" width="100"> <!-- Replace with your image -->
+                <h4>IT Master Classes</h4>
+                <p>
+                    Conducting workshops and training <br> sessions on graphic design | <br> web development | 
+                    Digital Marketing Topics
+                    Mentoring | Coaching aspiring IT Professionals
+                </p>
+                <a href="#" class="btn btn-primary">Register Now!!!</a>
+            </div>
+        </div>
+    </div>
+    <br>
+<hr>
+    <!-- Projects Section -->
+    <div id="projects" class="container">
+        <h2 class="text-center">My Recent Projects</h2>
+        <div class="flex-container">
+            <div class="custom-container">
+                
+                <img src="projects/Bisbec.jpg" alt="Description of Image 1" width="180"> <!-- Replace with your image -->
+                <h4>Bisbec Enterprise</h4>
+                <a href="https://bisbecenterprise.com/" class="btn btn-primary" target="_blank">View Website</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="projects/access.jpg" alt="Description of Image 2" width="240"> <!-- Replace with your image -->
+                <h4>Access A Properties</h4>
+                <a href="https://accessaproperties.com/" class="btn btn-primary" target="_blank">View Website</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="projects/kasa logo.png" alt="Description of Image 3" width="200"> <!-- Replace with your image -->
+                <h4>Kasa Konsultants</h4>
+                <a href="https://kasakonsultants.com/" class="btn btn-primary" target="_blank">View Website</a>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="custom-container">
+                
+                <img src="projects/njc.jpeg" alt="Description of Image 1" width="200"> <!-- Replace with your image -->
+                <h4>NJC</h4>
+                <a href="https://njcquizgh.com/" class="btn btn-primary" target="_blank">View Website</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="projects/piwc.jpg" alt="Description of Image 2" width="200"> <!-- Replace with your image -->
+                <h4>PIWC Dansoman</h4>
+                <a href="https://piwcdc.org/" class="btn btn-primary" target="_blank">View Website</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="projects/ps-ahuakese-img.jpg" alt="Description of Image 3" width="200"> <!-- Replace with your image -->
+                <h4>Pastor Ahuakese</h4>
+                <a href="https://bisbec.online/" class="btn btn-primary" target="_blank">View Website</a>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="custom-container">
+                
+                <img src="projects/richway.jpg" alt="Description of Image 1" width="200"> <!-- Replace with your image -->
+                <h4>Richway Cleaning & Engineering Services</h4>
+                <a href="https://richwaycleaning.online/" class="btn btn-primary" target="_blank">View Website</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="projects/Hrms.jpeg.jpg" alt="Description of Image 3" width="250"> <!-- Replace with your image -->
+                <h4>HRM System</h4>
+                <a href="" class="btn btn-primary" target="_blank">View Web App</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="projects/CACI.jpg" alt="Description of Image 3" width="220"> <!-- Replace with your image -->
+                <h4>CACI Korle-Gonno</h4>
+                <a href="" class="btn btn-primary" target="_blank">View Website</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="projects/yaven.jpg" alt="Description of Image 2" width="200"> <!-- Replace with your image -->
+                <h4>Yaven Heights Hotel</h4>
+                <a href="https://g.co/kgs/dMSW61c" class="btn btn-primary" target="_blank">View Business Profile</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="projects/Kings architecture.png" alt="Description of Image 3" width="200"> <!-- Replace with your image -->
+                <h4>Kings Architecture</h4>
+                <a href="https://g.co/kgs/WvDwKwr" class="btn btn-primary" target="_blank">View Business Profile</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="projects/HIWC.jpg" alt="Description of Image 3" width="200"> <!-- Replace with your image -->
+                <h4>HIWC Dansoman</h4>
+                <a href="https://g.co/kgs/GUchSi6" class="btn btn-primary" target="_blank">View Business Profile</a>
+            </div>
+            
+        </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="container my-5">
+        <h2 class="text-center">My Skills</h2>
+        <div class="d-flex flex-wrap justify-content-center">
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fab fa-html5"></i> HTML</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fab fa-css3-alt"></i> CSS</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fab fa-js"></i> JavaScript</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fab fa-react"></i> React</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fab fa-node-js"></i> Node.js</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fas fa-database"></i> SQL Database</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fab fa-sass"></i> SASS</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fab fa-bootstrap"></i> Bootstrap</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fab fa-tailwindcss"></i> Tailwind CSS</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fab fa-laravel"></i> Laravel</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fab fa-php"></i> PHP</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fas fa-table"></i> Excel</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fab fa-git"></i> Git</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fas fa-business-time"></i> Google Business Profiles</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fab fa-figma"></i> Oracle Apex</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fab fa-react"></i> Next.js</button>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-outline-dark skill-btn"><i class="fas fa-fire"></i> Firebase</button>
+            </div>
+            
+
+        </div>
+    </div>
+    <hr>
+
+    <!-- Skills Section -->
+    <div id="skills" class="container" id="chartSection">
+        <h2 class="text-center">My Achievements</h2>
+        <canvas id="skillsChart"></canvas>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            const ctx = document.getElementById('skillsChart').getContext('2d');
+            const skillsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Graphic Design', 'HTML', 'CSS', 'JavaScript', 'PHP', 'Laravel', 'React', 'Node.js', 'Next.js', 'Oracle Apex', 'Git', 'Excel', 'SASS', 'Tailwind CSS', 'SQL Database','Firebase', 'Google Business Profile'],
+                    datasets: [{
+                        label: 'Skill Level',
+                        data: [75, 90, 70, 50, 50, 60, 50, 40, 60, 50, 70, 75, 80, 60, 70, 60, 90], // Adjusted skill levels
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(255, 206, 86, 1)',
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+        
+    </div>
+<br>
+    <!-- Vlogs Section -->
+    <div id="vlogs" class="container" style="justify-content: center;">
+        <h2 class="text-center">My Vlogs</h2>
+        <hr>
+        <center> <div class="row">
+            
+            <div class="custom-container">
+                
+                <iframe width="210" height="300" src="https://www.youtube.com/embed/QM_GeRqtDMM" style="border-radius: 20px;"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Belykweb Solutions presenting their website project at PIWC Dansoman presbytery meeting</p>
+                <a href="https://www.youtube.com/@belykwebsolutions" class="btn btn-primary">Our Channel</a>
+            </div>
+            <div class="custom-container">
+                <iframe width="210" height="315" src="https://www.youtube.com/embed/8pVsQcxDTww" style="border-radius: 20px;"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Belykweb Solutions developed PIWC Dansoman website</p><hr>
+                <a href="https://www.youtube.com/@belykwebsolutions" class="btn btn-primary">Our Channel</a>
+            </div>
+            <div class="custom-container">
+                <iframe width="210" height="310" src="https://www.youtube.com/embed/xWbpyOXmcKc" style="border-radius: 20px;"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Belykweb Solutions presenting their website project at CACI Korle-Gonno, Central</p>
+                <a href="https://www.youtube.com/@belykwebsolutions" class="btn btn-primary">Our Channel</a>
+            </div>
+            <br>
+        </div></center>
+    </div>
+
+    <br>
+    <style>
+           .counter-container {
+            text-align: center;
+        }
+
+        .counter {
+            font-size: 3rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .label {
+            font-size: 1.2rem;
+           
+            color: #555;
+        }
+
+        .main-container {
+            display: flex;
+            width: 80%;
+            max-width: 900px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-container, .map-container {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Contact section styling */
+        .contact-container {
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact-container h2 {
+            color: #333;
+        }
+
+        .contact-container input,
+        .contact-container textarea {
+            width: 90%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .contact-container button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .contact-container button:hover {
+            background-color: #555;
+        }
+
+        /* Map section styling */
+        .map-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .map-container iframe {
+            width: 90%;
+            height: 90%;
+            border: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 610px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .map-container {
+                height: 300px;
+            }
+        }
+
+        /* Basic styling for the container and icons */
+        .social-media-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .social-media-container a {
+            text-decoration: none;
+            color: #fff; /* Default icon color */
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .social-media-container a:hover {
+            transform: scale(1.1); /* Slightly enlarges icon on hover */
+        }
+
+        /* Specific background colors for each icon */
+        .facebook { background-color: #3b5998; }
+        .youtube { background-color: #FF0000; }
+        .instagram { background-color: #e4405f; }
+        .tiktok { background-color: #000; } /* TikTok default color */
+        .linkedin { background-color: #0077b5; }
+    </style>
+   
+    <!-- Profile Section -->
+    <div class="counter-container">
+        <h3 class="label">Projects Completed</h3>
+        <div class="counter">0</div>
+        
+    </div>
+
+    <hr>
+    <center>
+        <div class="main-container" >
+            <!-- Contact Us Container -->
+            <div class="contact-container">
+                <h2 id="contact">Contact Us</h2>
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name">
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email">
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        
+            <!-- Location Map Container -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15884.487493745535!2d-0.2702122!3d5.5489441!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf974f34201c41%3A0x8856e1eb231afc39!2sBelykweb%20Solutions!5e0!3m2!1sen!2sgh!4v1730246231034!5m2!1sen!2sgh" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+            </div>
+        </div></center>
+    <br>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Quarme Israel. All Rights Reserved.</p>
+        <div class="social-media-container">
+            <!-- Facebook Icon -->
+            <a href="https://web.facebook.com/belykweb.solutions" target="_blank" class="facebook" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        
+            <!-- YouTube Icon -->
+            <a href="https://www.youtube.com/@belykwebsolutions" target="_blank" class="youtube" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+        
+            <!-- Instagram Icon -->
+            <a href="https://www.instagram.com/belykwebsolutions/" target="_blank" class="instagram" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        
+            <!-- TikTok Icon -->
+            <a href="https://www.tiktok.com/@belykwebsolutions" target="_blank" class="tiktok" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        
+            <!-- LinkedIn Icon -->
+            <a href="https://www.linkedin.com/in/belykweb-solutions-b84386250/" target="_blank" class="linkedin" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Target count and speed
+    const targetCount = 100;
+    const counterElement = document.getElementById("projectCounter");
+    let count = 0;
+
+    // Speed of the counter animation in milliseconds
+    const speed = 50;
+
+    // Function to update counter
+    function updateCounter() {
+        count++;
+        counterElement.textContent = count;
+
+        // Continue incrementing until we reach targetCount
+        if (count < targetCount) {
+            setTimeout(updateCounter, speed);
+        }
+    }
+
+    // Start the counter animation
+    updateCounter();
+    </script>
+</body>
+</html>
