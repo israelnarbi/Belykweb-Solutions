@@ -16,6 +16,7 @@
         .navbar {
             justify-content: center;
             color: black;
+            
         }
         .navbar-brand {
             font-weight: bold;
@@ -33,8 +34,11 @@
             background-position: center;
             display: flex;
             align-items: center;
-            justify-content: left;
+           
             overflow: hidden; /* Hide overflowing content */
+            color: white;
+            
+            
         }
 
         .overlay {
@@ -46,17 +50,7 @@
             background-color: rgb(0, 0, 0, 0.7); /* Adjust opacity and color */
         }
 
-         /* Text section */
-        .looping-text {
-            position: absolute;
-            left: 20px;
-            font-size: 20px;
-            color: white;
-            font-weight: bold;
-            opacity: 0; /* Start hidden */
-            transition: opacity 2.5s ease-in-out; /* Smooth transition */
-            z-index: 1;
-        }
+         
 
         .visible {
             opacity: 1; /* Show the text */
@@ -149,6 +143,50 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             background-color: #f8f9fa;
         }
+
+        .text1{
+             max-width: 600px;
+             z-index: 1;
+             margin-left: 3%;
+             
+             
+        }
+
+        .text1 h3 {
+            font-size: 30px;
+            
+
+        }
+
+        .text1 h1 {
+            font-size: 56px;
+            font-weight: bolder;
+            margin: -3px 0;
+            color: rgba(184, 135, 2, 0.719);
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .text1 p {
+            font-size: 25px;
+
+        }
+
+        .social{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 63px;
+            height: 63px;
+            border: 2[x solid] #00c0ce;
+            background: transparent;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #00c0ce;
+            text-decoration: none;
+            margin: 30px 15px 30px 0;
+
+        }
+        
     </style>
 </head>
 <body>
@@ -182,43 +220,54 @@
 
 <div class="background-contain">
     <!-- Looping text on the left side -->
-    <div class="looping-text" id="text1">
-        <h2 style="color: rgb(255, 196, 0);">Hello I'm</h2>
-       <h1>Quarme Israel</h1>
-        <p>
-            I'm a web developer and a Graphic Designer
+    <div class="text1">
+        <br><br><br><br><br>
+        <h3>Hello, It's Me....</h3>
+        <h1>Quarme Israel</h1>
+        <h3>And I'm a <span class="text"></span></h3>
+        <p>With extensive experience of 3 years<br>
         </p>
+        <div class="social-media-container">
+            <a href="https://web.facebook.com/belykweb.solutions" target="_blank" class="facebook" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        
+            <!-- YouTube Icon -->
+            <a href="https://www.youtube.com/@belykwebsolutions" target="_blank" class="youtube" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+        
+            <!-- Instagram Icon -->
+            <a href="https://www.instagram.com/belykwebsolutions/" target="_blank" class="instagram" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        
+            <!-- TikTok Icon -->
+            <a href="https://www.tiktok.com/@belykwebsolutions" target="_blank" class="tiktok" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        
+            <!-- LinkedIn Icon -->
+            <a href="https://www.linkedin.com/in/belykweb-solutions-b84386250/" target="_blank" class="linkedin" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+        
     </div>
-    </div>
-  <br>
-    
+   
+</div>
+<!-- Add the typed.js library link in the src attribute -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 <script>
-    const texts = [
-        document.getElementById('text1'),
-    ];
-
-    let currentIndex = 0;
-
-    function showNextText() {
-        // Hide all texts
-        texts.forEach((text, index) => {
-            text.classList.remove('visible');
-        });
-
-        // Show the current text
-        texts[currentIndex].classList.add('visible');
-
-        // Move to the next text
-        currentIndex = (currentIndex + 1) % texts.length; // Loop back to the first text after the last
-    }
-
-    // Show the first text immediately
-    showNextText();
-
-    // Change text every 8 seconds
-    setInterval(showNextText, 8000);
+  var typed = new Typed(".text", {
+    strings: ["Frontend Developer", "Web Developer", "Graphic Designer"],
+    typeSpeed: 200,
+    backSpeed: 100,
+    loop: true
+  });
 </script>
+
     
 
     <!-- About Section -->
@@ -263,7 +312,7 @@
                     Branding materials (business cards, brochures, flyers)  |
                     Social media graphics  |
                     Digital and print designs</p>
-                <a href="#" class="btn btn-primary">View More</a>
+                <a href="https://www.pinterest.com/belykwebsolutions/" class="btn btn-primary">View More</a>
             </div>
             <div class="custom-container">
                 
@@ -273,7 +322,7 @@
                     E-commerce solutions  |
                     Responsive design for mobile devices  |<br>
                     Website maintenance and updates</p>
-                <a href="#" class="btn btn-primary">Book a Service</a>
+                <a href="https://forms.gle/kqTc2A6Kqrsb3w8L7" class="btn btn-primary">Book a Service</a>
             </div>
             <div class="custom-container">
                 
@@ -283,7 +332,7 @@
                     Content creation and strategy  |
                     Search engine optimization (SEO)  |
                     Email marketing campaigns</p>
-                <a href="#" class="btn btn-primary">Book a Service</a>
+                <a href="https://forms.gle/kqTc2A6Kqrsb3w8L7" class="btn btn-primary">Book a Service</a>
             </div>
         </div>
         <div class="flex-container">
@@ -299,7 +348,7 @@
                     Binding services  |  Laminating |<br>
                     Picture Framing   | 
                 </p>
-                <a href="#" class="btn btn-primary">Book a service</a>
+                <a href="https://forms.gle/kqTc2A6Kqrsb3w8L7" class="btn btn-primary">Book a service</a>
             </div>
             <div class="custom-container">
                 
@@ -310,7 +359,7 @@
                     Regular updates and maintenance  |
                     Customer engagement through Google My Business
                 </p>
-                <a href="#" class="btn btn-primary">View Profile</a>
+                <a href="https://www.google.com/search?q=belykweb+solutions&rlz=1C1JZAP_enGH1091GH1091&oq=b&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIGCAEQRRhAMgYIAhBFGDkyBggDECMYJzIGCAQQRRg8MgYIBRBFGDwyBggGEEUYPTIGCAcQRRg80gEIMTM3MWowajSoAgCwAgE&sourceid=chrome&ie=UTF-8" class="btn btn-primary">View Profile</a>
             </div>
             <div class="custom-container">
                 
@@ -321,7 +370,7 @@
                     Digital Marketing Topics
                     Mentoring | Coaching aspiring IT Professionals
                 </p>
-                <a href="#" class="btn btn-primary">Register Now!!!</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUs6XDIbAJDFVv0dd17R5cVKHrWSTovR4vGbXE2iHpeRZzuA/viewform" class="btn btn-primary">Register Now!!!</a>
             </div>
         </div>
     </div>
@@ -414,13 +463,12 @@
     </div>
 
 
-
     <div class="container my-5">
         <h2 class="text-center">My Skills</h2>
-        <div class="d-flex flex-wrap justify-content-center">
-            <div class="p-2">
+        <div class="d-flex flex-wrap justify-content-center" >
+            <div class="p-2" >
                 <button class="btn btn-outline-dark skill-btn"><i class="fab fa-html5"></i> HTML</button>
-            </div>
+            </div> 
             <div class="p-2">
                 <button class="btn btn-outline-dark skill-btn"><i class="fab fa-css3-alt"></i> CSS</button>
             </div>
@@ -633,6 +681,8 @@
 
         .contact-container button:hover {
             background-color: #555;
+            transform: scale(1.5); /* Slightly enlarges icon on hover */
+    box-shadow: 0 0 30px #00eeff;
         }
 
         /* Map section styling */
@@ -680,7 +730,8 @@
         }
 
         .social-media-container a:hover {
-            transform: scale(1.1); /* Slightly enlarges icon on hover */
+            transform: scale(2.1); /* Slightly enlarges icon on hover */
+            box-shadow: 0 0 30px #00eeff;
         }
 
         /* Specific background colors for each icon */
@@ -727,7 +778,7 @@
     <br>
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Quarme Israel. All Rights Reserved | Developed by Belykweb Solutions</p>
+        <p>&copy; 2024 Quarme Israel. All Rights Reserved.</p>
         <div class="social-media-container">
             <!-- Facebook Icon -->
             <a href="https://web.facebook.com/belykweb.solutions" target="_blank" class="facebook" title="Facebook">
