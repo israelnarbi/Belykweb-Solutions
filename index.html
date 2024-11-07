@@ -745,9 +745,34 @@
     <!-- Profile Section -->
     <div class="counter-container">
         <h3 class="label">Projects Completed</h3>
-        <div class="counter">0</div>
+        <div id="counter">0</div>
         
     </div>
+
+      #counter {
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    <script>
+        // Counter animation function
+        const countUp = (target, maxCount, speed) => {
+            let currentCount = 0;
+            const interval = setInterval(() => {
+                currentCount++;
+                target.textContent = currentCount;
+                if (currentCount >= maxCount) {
+                    clearInterval(interval);
+                }
+            }, speed);
+        };
+
+        // Start counting when the page loads
+        const counterDiv = document.getElementById('counter');
+        countUp(counterDiv, 100, 20); // Adjust speed as needed (20 milliseconds)
+    </script>
 
     <hr>
     <center>
