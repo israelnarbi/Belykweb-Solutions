@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quarme Israel | Graphic Designer & Web Developer</title>
+    <title>Belykweb Solutions | Graphic Design & Web Development Agency in Accra, Ghana</title>
+    <link rel="shortcut icon" href="OUR LOGO.png" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   
     <style>
         /* Custom Styles */
         body {
@@ -118,7 +120,8 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            margin: 2rem 0;
+            margin-left: 10%;
+            
         }
         .custom-container {
             text-align: center;
@@ -131,12 +134,14 @@
             min-width: 250px;
             max-width: 30%;
             transition: transform 0.3s, box-shadow 0.3s;
+            margin-left: ;
         }
         .custom-container img {
             max-width: 100%;
             height: auto;
             border-radius: 30px;
             margin-bottom: 1rem;
+           
         }
         .custom-container:hover {
             transform: translateY(-30px);
@@ -186,8 +191,244 @@
             margin: 30px 15px 30px 0;
 
         }
+
+
+        
+.mySlide {
+  width: 95%;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.slide {
+    display: flex; /* Arrange images in a row */
+  gap: 30px; /* Space between images (optional) */
+  width: 10000; /* Total width of all images (29 images) */
+  animation: slide 10s linear infinite; /* Animate all images in 20 seconds */
+}
+
+.slide img {
+    width: calc(100% / 7); /* Adjust image width to fit 5 in the viewport (optional tweak for layout) */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images fill their space */
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%); /* Moves the slider left */
+  }
+}
+
+
+
+/* Style for the button */
+.toggle-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px; /* Add space between button and dropdown */
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}
+
+/* The container that will hold the images */
+.image-container {
+  overflow: hidden;
+  max-height: 0; /* Initially hidden */
+  transition: max-height 0.5s ease-out; /* Smooth dropdown effect */
+  border: 1px solid #ddd; /* Optional border for clarity */
+  border-radius: 5px;
+}
+
+/* Styling the image slider */
+.slidee {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.slidee img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+.testimonial {
+    padding-top: 10px;
+    margin-left: 15%;
+}
+
+.testimonial .col-3 {
+    text-align: center;
+    padding: 40px 40px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+    
+}
+
+.testimonial .col-3 img {
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.testimonial .col-3:hover {
+    transform: translateY(-10px);
+}
+
+.small-container .row .col-2:hover img{
+    transform: rotateY(360deg); /* Flip the image by 360 degrees */   
+
+}
+
+.fa.fa-quote-left {
+    font-size: 34px;
+    color: var(--highlight-color);
+}
+
+.col-3 p {
+    font-size: 12px;
+    margin: 12px 0;
+    color: var(--text-color);
+}
+
+.testimonial .col-3 h3 {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+   gap: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        margin-left: 10%;
+    }
+
+    .col-3 {
+        flex: 1 1 100%;
+        max-width: 80%;
+        margin-bottom: 1rem;
+    }
+}
         
     </style>
+
+<style>
+                
+        
+    /* Button */
+    .overlay-btn {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 20px;
+        margin-top: 5%;
+    }
+
+    .overlay-btn:hover {
+        background-color: #b30000;
+        transform: rotate3d(30px);
+    }
+
+    /* Overlay */
+    .overlay {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+    }
+
+    .overlay-content {
+        width: 80%;
+        max-width: 800px;
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        overflow-y: auto;
+        max-height: 80%;
+        text-align: center;
+        position: relative;
+    }
+
+    /* Close Button */
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 24px;
+        color: #333;
+        cursor: pointer;
+    }
+
+    /* Gallery Grid */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        margin-top: 10%;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .gallery {
+            grid-template-columns: repeat(2, 1fr); /* Show 2 images per row on smaller screens */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .gallery {
+            gap: 30px;
+            grid-template-columns: 1fr; /* Show 1 image per row on very small screens */
+        }
+    }
+</style>
 </head>
 <body>
 
@@ -222,9 +463,9 @@
     <!-- Looping text on the left side -->
     <div class="text1">
         <br><br><br><br><br>
-        <h3>Hello, It's Me....</h3>
+        <h3>Hello, I'm....</h3>
         <h1>Quarme Israel</h1>
-        <h3>And I'm a <span class="text"></span></h3>
+        <h3>A <span class="text"></span></h3>
         <p>With extensive experience of 3 years<br>
         </p>
         <div class="social-media-container">
@@ -261,51 +502,98 @@
 
 <script>
   var typed = new Typed(".text", {
-    strings: ["Frontend Developer", "Web Developer", "Graphic Designer"],
-    typeSpeed: 200,
-    backSpeed: 100,
+    strings: ["Frontend Developer", "Web Developer", "Graphic Designer", "Video Editor"],
+    typeSpeed: 60,
+    backSpeed: 40,
     loop: true
   });
 </script>
 
-    
+    <br>
+    <center>
+        <iframe width="390" height="350" src="https://www.youtube.com/embed/LyzbwnybYZE" title="Belykweb Solutions offers wide range of services such as website development and Graphic Design… 🙏🙏💯" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+    </center>
     <!-- About Section -->
-    <div id="about" class="about container">
-        <div class="overlay"></div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="custom-container">
-                    <img src="my image.jpg" alt="Description of Image 1" width="1500px"> <!-- Replace with your image -->
-                    <a href=" https://wa.me/+233598296093" class="btn btn-primary" target="_blank">Let's Chart</a>
+    <div id="about" class="about container" style="padding: 20px;">
+        <div class="row d-flex align-items-center" style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <!-- Image Container -->
+            <div class="col-md-4" style="flex: 1; max-width: 100%; text-align: center;">
+                <div class="custom-container" style="position: relative;">
+                    <img src="my image.jpg" alt="Description of Image 1" style="width: 100%; max-width: 400px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);"> 
+                    <!-- Replace with your image -->
+                    <a href="https://wa.me/+233598296093" class="btn btn-primary" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; font-size: 16px; background-color: #007BFF; color: white; border: none; border-radius: 5px; text-decoration: none;">
+                        Let's Chat
+                    </a>
                 </div>
             </div>
-            <div class="col-md-8 d-flex align-items-center">
-                
-                <p style="font-size: 20px; font-weight: 10px;"><b style="color: red;">Quarme Israel</b> 
-                    is a dynamic and talented young man based in Accra, 
-                    currently in his final year as a Computer Science student at Accra Technical University.
-                     With a passion for creativity and technology, he has established himself as a proficient
-                    graphic designer and web developer. His skills extend into the digital marketing realm, 
-                    where he expertly manages Google Business Profiles and creates compelling online presences 
-                    for various businesses.<br><br>
-
-                    In addition to his tech-savvy skills, Quarme is a vlogger who shares insights and knowledge about the
-                    industry, making complex concepts accessible to a broader audience. He offers general printing and branding 
-                    services, helping clients create memorable visual identities. Driven by a desire to empower others, 
-                    he conducts master classes in IT, sharing his expertise and inspiring the next generation of tech 
-                    enthusiasts. With a blend of creativity, technical skills, and a commitment to education, 
-                    Quarme Israel is poised to make a significant impact in the digital landscape
+    
+            <!-- Text Container -->
+            <div class="col-md-8" style="flex: 2; max-width: 90%; padding: 10px;">
+                <p style="font-size: 20px; line-height: 1.6; font-weight: 400; text-align: justify;">
+                    <b style="color: red;">Quarme Israel</b> is a dynamic and talented young man based in Accra, currently in his final year as a Computer Science student at Accra Technical University. 
+                    With a passion for creativity and technology, he has established himself as a proficient graphic designer and web developer. His skills extend into the digital marketing realm, 
+                    where he expertly manages Google Business Profiles and creates compelling online presences for various businesses.
+                    <br><br>
+                    In addition to his tech-savvy skills, Quarme is a vlogger who shares insights and knowledge about the industry, making complex concepts accessible to a broader audience. 
+                    He offers general printing and branding services, helping clients create memorable visual identities. Driven by a desire to empower others, he conducts master classes in IT, 
+                    sharing his expertise and inspiring the next generation of tech enthusiasts. With a blend of creativity, technical skills, and a commitment to education, Quarme Israel is poised to 
+                    make a significant impact in the digital landscape.
                 </p>
             </div>
         </div>
     </div>
+    
+
+    <center>
+        <h2 style="font-weight: bolder; font-size: 35px;">WHAT WE DO</h2>
+      
+      <div class="mySlide">
+        <div class="slide">
+            <img src="Flyers/22.png" alt="Image 1">
+            <img src="Flyers/44.png" alt="Image 1">
+            <img src="Flyers/re.png" alt="Image 1">
+            <img src="Flyers/wdw.png" alt="Image 1">
+            <img src="Flyers/aAX.png" alt="Image 1">
+            <img src="Flyers/Belyk.png" alt="Image 1">
+            <img src="Flyers/Belykweb.png" alt="Image 1">
+            <img src="Flyers/Bew.png" alt="Image 1">
+            <img src="Flyers/bh.png" alt="Image 1">
+            <img src="Flyers/Contact.png" alt="Image 1">
+            <img src="Flyers/ds.png" alt="Image 1">
+            <img src="Flyers/ewfew.png" alt="Image 1">
+            <img src="Flyers/FD.png" alt="Image 1">
+            <img src="Flyers/rjm.png" alt="Image 1">
+            <img src="Flyers/GENERAL FLYER.png" alt="Image 1">
+            <img src="Flyers/gfd.png" alt="Image 1">
+            <img src="Flyers/hk.png" alt="Image 1">
+            <img src="Flyers/k.png" alt="Image 1">
+            <img src="Flyers/KJ,DD.png" alt="Image 1">
+            <img src="Flyers/my profile-1.jpg" alt="Image 1">
+            <img src="Flyers/my profile.jpg" alt="Image 1">
+            <img src="Flyers/n.png" alt="Image 1">
+            <img src="Flyers/oij.png" alt="Image 1">
+            <img src="Flyers/qq.png" alt="Image 1">
+            <img src="Flyers/rankw.jpg" alt="Image 1">
+            <img src="Flyers/sc.png" alt="Image 1">
+            <img src="Flyers/Scan for our service booking.png" alt="Image 1">
+            <img src="Flyers/x.png" alt="Image 1">
+            <img src="Flyers/z.png" alt="Image 1">
+
+        </div>
+        
+      </div>
+      </center>
+      <script src="script.js"></script>
+      
+    
+<br>
 
     <!-- Services Section -->
     <div id="services" class="container">
         <h2 class="text-center">My Services </h2>
         <div class="flex-container">
-            <div class="custom-container">
+            <div class="custom-container" >
                 <img src="services/graphic.jpg" alt="Description of Image 1" width="110"> <!-- Replace with your image -->
                 <h4>Graphic Design</h4>
                 <p> Logo design  |
@@ -353,7 +641,7 @@
             <div class="custom-container">
                 
                 <img src="services/Google-Business-Profile.png" alt="Description of Image 2" width="110"> <!-- Replace with your image -->
-                <h4>Google Business Profile</h4>
+                <h4>Google Business Profile Creating</h4>
                 <p>
                     Setup and optimization of <br>Google Business Profiles  |<br>
                     Regular updates and maintenance  |
@@ -372,13 +660,44 @@
                 </p>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUs6XDIbAJDFVv0dd17R5cVKHrWSTovR4vGbXE2iHpeRZzuA/viewform" class="btn btn-primary">Register Now!!!</a>
             </div>
+            <div class="custom-container">
+                
+                <img src="services/video-editing.webp" alt="Description of Image 3" width="100"> <!-- Replace with your image -->
+                <h4>Video Editing</h4>
+                <p>
+                    Cutting and merging clips |<br> Adding transitions and effects | <br> Color grading and correction | <br>
+                    Audio enhancements |
+                    Motion graphics and animations | Corporate video project | Event videography
+                </p>
+                <a href="https://wa.me/+233598296093" class="btn btn-primary" target="_blank">Contact Us Now!!!</a>
+            </div>
         </div>
     </div>
     <br>
 <hr>
     <!-- Projects Section -->
     <div id="projects" class="container">
-        <h2 class="text-center">My Recent Projects</h2>
+        <h2 class="text-center">Finshed Web Projects</h2>
+        <div class="flex-container">
+            <div class="custom-container">
+                
+                <img src="projects/dreamlight.jpg" alt="Description of Image 1" width="180"> <!-- Replace with your image -->
+                <h4>Dreamlight Solar Solutions</h4>
+                <a href="https://dreamlightsolar.com/" class="btn btn-primary" target="_blank">View Website</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="projects/kwc.png" alt="Description of Image 2" width="240"> <!-- Replace with your image -->
+                <h4>Kids Writing Consult</h4>
+                <a href="https://kidswritringconsult.com/" class="btn btn-primary" target="_blank">View Website</a>
+            </div>
+            <div class="custom-container">
+                
+                <img src="projects/ranking.png" alt="Description of Image 3" width="200"> <!-- Replace with your image -->
+                <h4>Ranking Enterprise</h4>
+                <a href="https://rankingenterprise.online/" class="btn btn-primary" target="_blank">View Website</a>
+            </div>
+        </div>
         <div class="flex-container">
             <div class="custom-container">
                 
@@ -462,7 +781,106 @@
 
     </div>
 
-
+   
+    
+            
+       
+       <center>
+        <button class="overlay-btn">Graphic Design Projects</button>
+       </center>
+            
+            <!-- Overlay -->
+            <div id="imageOverlay" class="overlay">
+                <div class="overlay-content">
+                    <span id="closeOverlay" class="close-btn">&times;</span>
+                    <div class="gallery">
+                        <img src="DZNS/3.png" alt="Image 1">
+                        <img src="DZNS/Uniwiz Foundation.png" alt="Image 1">
+                        <img src="DZNS/A5.jpg" alt="Image 1">
+                        <img src="DZNS/fu.jpg" alt="Image 1">
+                        <img src="DZNS/jygiuh.png" alt="Image 1">
+                        <img src="DZNS/LP.png" alt="Image 1">
+                        <img src="DZNS/yes.jpg" alt="Image 1">
+                        <img src="DZNS/3354biwad.jpg" alt="Image 1">
+                        <img src="DZNS/1234.png" alt="Image 1">
+                        <img src="DZNS/1tu7.jpg" alt="Image 1">
+                        <img src="DZNS/20230415_172639.jpg" alt="Image 1">
+                        <img src="DZNS/3R4.jpg" alt="Image 1">
+                        <img src="DZNS/50 by 20.jpg" alt="Image 1">
+                        <img src="DZNS/82882Biwaduk.jpg" alt="Image 1">
+                        <img src="DZNS/About Us.jpg" alt="Image 1">
+                        <img src="DZNS/acc.jpg" alt="Image 1">
+                        <img src="DZNS/Adodi (Clams).png" alt="Image 1">
+                        <img src="DZNS/amakhgh.jpg" alt="Image 1">
+                        <img src="DZNS/b.jpg" alt="Image 1">
+                        <img src="DZNS/Biwad..1.jpg" alt="Image 1">
+                        <img src="DZNS/Biwadyear.png" alt="Image 1">
+                        <img src="DZNS/BWd..333.jpg" alt="Image 1">
+                        <img src="DZNS/cctv.gh.jpg" alt="Image 1">
+                        <img src="DZNS/choose us.jpg" alt="Image 1">
+                        <img src="DZNS/dr.png" alt="Image 1">
+                        <img src="DZNS/Dry Pepper.png" alt="Image 1">
+                        <img src="DZNS/DS.jpg" alt="Image 1">
+                        <img src="DZNS/EVG.jpg" alt="Image 1">
+                        <img src="DZNS/f day.jpg" alt="Image 1">
+                        <img src="DZNS/guy.jpg" alt="Image 1">
+                        <img src="DZNS/IMG-20220817-WA0004.jpg" alt="Image 1">
+                        <img src="DZNS/IMG-20231122-WA0028.jpg" alt="Image 1">
+                        <img src="DZNS/IMG-20240324-WA0008.jpg" alt="Image 1">
+                        <img src="DZNS/IMG-20240424-WA0016.jpg" alt="Image 1">
+                        <img src="DZNS/IMG-20240531-WA0044.jpg" alt="Image 1">
+                        <img src="DZNS/IMG-20240715-WA0089.jpg" alt="Image 1">
+                        <img src="DZNS/IMG-20240716-WA0018.jpg" alt="Image 1">
+                        <img src="DZNS/IMG-20240723-WA0088.jpg" alt="Image 1">
+                        <img src="DZNS/IMG_20240528_060333.jpg" alt="Image 1">
+                        <img src="DZNS/Joyce2.jpg" alt="Image 1">
+                        <img src="DZNS/Kings architecture.png" alt="Image 1">
+                        <img src="DZNS/kj.jpg" alt="Image 1">
+                        <img src="DZNS/KOOOJG.jpg" alt="Image 1">
+                        <img src="DZNS/MAIN Service Flyer.jpg" alt="Image 1">
+                        <img src="DZNS/Miracle Chidera Call card design.jpg" alt="Image 1">
+                        <img src="DZNS/misiion.jpg" alt="Image 1">
+                        <img src="DZNS/mockup.png" alt="Image 1">
+                        <img src="DZNS/PERFUMES.png" alt="Image 1">
+                        <img src="DZNS/rich.jpg" alt="Image 1">
+                        <img src="DZNS/Richway Wishes.jpg" alt="Image 1">
+                        <img src="DZNS/Screenshot_20230723_174137_Google.jpg" alt="Image 1">
+                        <img src="DZNS/t ss.jpg" alt="Image 1">
+                        <img src="DZNS/t87.jpg" alt="Image 1">
+                        <img src="DZNS/Untitled-1_new.jpg Foundation.png" alt="Image 1">
+                        <img src="DZNS/WEW.jpg" alt="Image 1">
+                        <img src="DZNS/yes access letterhead.jpg" alt="Image 1">
+                        <img src="DZNS/congratulations-design-template-57c3f888e9e5ea125abf6137f8c76177_screen.jpg" alt="Image 1">
+                        
+                    </div>
+                </div>
+            </div>
+        
+            <script>
+                // Get references to the button, overlay, and close button
+                const showOverlay = document.querySelector('.overlay-btn');
+                const imageOverlay = document.getElementById('imageOverlay');
+                const closeOverlay = document.getElementById('closeOverlay');
+        
+                // Show the overlay when the button is clicked
+                showOverlay.addEventListener('click', () => {
+                    imageOverlay.style.display = 'flex';
+                });
+        
+                // Hide the overlay when the close button is clicked
+                closeOverlay.addEventListener('click', () => {
+                    imageOverlay.style.display = 'none';
+                });
+        
+                // Hide the overlay when clicking outside the content
+                imageOverlay.addEventListener('click', (e) => {
+                    if (e.target === imageOverlay) {
+                        imageOverlay.style.display = 'none';
+                    }
+                });
+            </script>
+       
+      
     <div class="container my-5">
         <h2 class="text-center">My Skills</h2>
         <div class="d-flex flex-wrap justify-content-center" >
@@ -742,39 +1160,108 @@
         .linkedin { background-color: #0077b5; }
     </style>
    
-    <!-- Profile Section -->
-    <div class="counter-container">
-        <h3 class="label">Projects Completed</h3>
-        <div id="counter">0</div>
-        
+
+   <center>
+    <div class="testimonial">
+        <div class="small-container">
+          <center><h2><strong style="font-family: 'Times New Roman', Times, serif; margin-bottom: 5px;">TESTIMONIALS FROM CLIENTS</strong></h2></center>
+            <div class="row">
+                <div class="col-3 ">
+                    <i class="fa fa-quote-left"></i>
+                    <p>
+                      <i>
+                        ⭐⭐⭐⭐⭐<br>
+                        "Working with Belykweb Solutions has been an absolute game-changer for my 
+                        business. They designed a sleek, functional website that perfectly reflects 
+                        my brand. The team was incredibly professional, attentive to my needs, and 
+                        delivered beyond my expectations. I’ve seen a significant boost in customer 
+                        engagement and sales since launching my website. Highly recommended!"
+    
+                      </i>
+                      </p>
+                    
+                    <center>
+                      <img src="testimony/IMG-20231203-WA0035.jpg">
+                    </center>
+                    <h3>EDWINA</h3>
+                </div>
+    
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>
+                      ⭐⭐⭐⭐⭐<br>
+                      <i>
+                        "I reached out to Belykweb Solutions for help with my branding and digital 
+                        presence, and they exceeded my expectations. From the logo design to managing 
+                        my social media accounts, their work was top-notch. They truly understand how 
+                        to make a brand stand out online. Thanks to their efforts, my event bookings 
+                        have increased significantly!"
+                      </i>
+                      </p>
+                    
+                    <center>
+                      <img src="testimony/IMG-20240423-WA0016.jpg">
+                    </center>
+                    <h3>Mr. Earnest</h3>
+                </div>
+    
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>
+                     <i>
+                      ⭐⭐⭐⭐⭐<br>
+                      "Belykweb Solutions provided our non-profit organization with an incredible 
+                      website that’s both visually stunning and easy to navigate. They were attentive
+                       to every detail and even offered training to help us manage updates. The 
+                       feedback from our donors and volunteers has been amazing. I couldn’t be 
+                       happier with their services!"
+                     </i>
+                      </p>
+                    
+                    <center>
+                      <img src="testimony/IMG_20240603_212312.jpg">
+                    </center>
+                    <h3>Mary</h3>
+                </div>
+    
+            </div>
+        </div>
     </div>
+    </center>
 
-     <style>
-          #counter {
-            font-size: 2em;
-            font-weight: bold;
-            text-align: center;
-            margin-top: 20px;
-        }
-     </style>
+   <div class="counter-container">
+    <h3 class="label">Projects Completed</h3>
+    <div id="counter">0</div>
+    
+</div>
 
-    <script>
-        // Counter animation function
-        const countUp = (target, maxCount, speed) => {
-            let currentCount = 0;
-            const interval = setInterval(() => {
-                currentCount++;
-                target.textContent = currentCount;
-                if (currentCount >= maxCount) {
-                    clearInterval(interval);
-                }
-            }, speed);
-        };
+ <style>
+      #counter {
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+    }
+ </style>
 
-        // Start counting when the page loads
-        const counterDiv = document.getElementById('counter');
-        countUp(counterDiv, 100, 20); // Adjust speed as needed (20 milliseconds)
-    </script>
+
+<script>
+    // Counter animation function
+    const countUp = (target, maxCount, speed) => {
+        let currentCount = 0;
+        const interval = setInterval(() => {
+            currentCount++;
+            target.textContent = currentCount;
+            if (currentCount >= maxCount) {
+                clearInterval(interval);
+            }
+        }, speed);
+    };
+
+    // Start counting when the page loads
+    const counterDiv = document.getElementById('counter');
+    countUp(counterDiv, 100, 20); // Adjust speed as needed (20 milliseconds)
+</script>
 
     <hr>
     <center>
@@ -866,6 +1353,8 @@
 
     // Start the counter animation
     updateCounter();
+
+
     </script>
 </body>
 </html>
