@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belykweb Solutions | Graphic Design & Web Development Agency in Accra, Ghana</title>
-    <link rel="shortcut icon" href="OUR LOGO.png" type="image/png">
+    <link rel="icon" href="OUR LOGO.png" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
    
@@ -31,7 +31,7 @@
             position: relative;
             width: 100%;
             height: 500px;
-            background-image: url('2.jpg'); /* Replace with your image path */
+            background-image: url('2.png'); /* Replace with your image path */
             background-size: cover;
             background-position: center;
             display: flex;
@@ -426,31 +426,35 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top"  style="background-color: rgb(255, 253, 253);" >
-        <a class="navbar-brand" href="#">
-            <img src="LOGO.png" alt="Logo" width="80" height="80" class="d-inline-block align-text-top">
-        </a>
-        <a class="navbar-brand" href="#">BWS</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" style="justify-content: flex-end;" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#about" style="color: black; font-weight: bolder;">ABOUT</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services" style="color: black; font-weight: bolder;">SERVICES</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects" style="color: black; font-weight: bolder;">PROJECTS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills" style="color: black; font-weight: bolder;">SKILLS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#vlogs" style="color: black; font-weight: bolder;">VLOGS</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.google.com/search?q=belykweb+solutions&rlz=1C1JZAP_enGH1091GH1091&oq=b&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIGCAEQRRhAMgYIAhBFGDkyBggDECMYJzIGCAQQRRg8MgYIBRBFGDwyBggGEEUYPTIGCAcQRRg80gEIMTM3MWowajSoAgCwAgE&sourceid=chrome&ie=UTF-8" style="color: black; font-weight: bolder;">OUR PROFILE</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact" style="color: black; font-weight: bolder;">CONTACT US</a></li>
-                
-            </ul>
+   <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgb(255, 253, 253);">
+    <a class="navbar-brand" href="#">
+        <img src="LOGO.png" alt="Belykweb Solutions Logo" width="80" height="80" class="d-inline-block align-text-top">
+    </a>
+    <a class="navbar-brand fw-bold" href="#">BWS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link fw-bold text-dark" href="#about">ABOUT</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold text-dark" href="#services">SERVICES</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold text-dark" href="#projects">PROJECTS</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold text-dark" href="#skills">SKILLS</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold text-dark" href="#vlogs">VLOGS</a></li>
+            <li class="nav-item">
+                <a class="nav-link fw-bold text-dark" href="https://www.google.com/search?q=belykweb+solutions" target="_blank" rel="noopener noreferrer">
+                    OUR PROFILE
+                </a>
+            </li>
+            <li class="nav-item"><a class="nav-link fw-bold text-dark" href="#contact">CONTACT US</a></li>
+        </ul>
+        <div class="d-flex align-items-center ms-3">
+            <button class="btn btn-outline-secondary" onclick="toggleDarkMode()" style="background-color: aquamarine;">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
-        <div style="margin-left: 1.5%;">
-            <button class="btn btn-outline-secondary ms-3" onclick="toggleDarkMode()" style="background-color: aquamarine;"><i class="fas fa-moon"></i></button>
-        </div>
-        
-    </nav>
+    </div>
+</nav>
 
 <div class="background-contain">
     <!-- Looping text on the left side -->
