@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quarme Israel Narbi | Full Stack Developer & Designer</title>
+  <meta name="description" content="Quarme Israel Narbi – Full Stack Web Developer, Graphic Designer & CEO of Belykweb Solutions. Based in Accra, Ghana.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="assets/img/logo.png" rel="icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== NAV OVERLAY ===== -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="header-inner">
+    <!-- Round logo image — replace src with your real logo path -->
+    <a href="#hero">
+      <img
+        src="assets/img/logo.png"
+        alt="Belykweb Solutions Logo"
+        class="logo-img"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+      >
+      <div class="logo-text" style="display:none;">BW<span class="logo-dot">.</span></div>
+    </a>
+
+    <nav id="nav">
+      <button class="nav-close" id="navClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+      <ul>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button id="themeToggle" aria-label="Toggle theme" title="Switch theme">
+        <i class="fas fa-sun" id="themeIcon"></i>
+      </button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <i class="fas fa-bars" id="toggleIcon"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-inner">
+
+    <!-- Left: Text -->
+    <div class="hero-text">
+      <div class="hero-badge"><span></span> Available for Projects</div>
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Quarme <span class="highlight">Israel</span> Narbi</h1>
+      <p class="hero-typed-line">I'm a <span class="typed-text" id="typedOutput"></span><span class="typed-cursor">|</span></p>
+      <p class="hero-desc">Full Stack Web Developer & Graphic Designer from Accra, Ghana. CEO of Belykweb Solutions — crafting bold digital experiences for businesses across Ghana, UK, Nigeria & beyond.</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num-row">
+            <span class="stat-num counter-num" data-target="4">0</span><span class="stat-plus">+</span>
+          </div>
+          <div class="stat-label">Years Exp.</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num-row">
+            <span class="stat-num counter-num" data-target="50">0</span><span class="stat-plus">+</span>
+          </div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num-row">
+            <span class="stat-num counter-num" data-target="4">0</span>
+          </div>
+          <div class="stat-label">Countries</div>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="#work" class="btn-primary-grad"><i class="fas fa-eye"></i> View My Work</a>
+        <a href="https://wa.me/233598296093" target="_blank" class="btn-outline-grad"><i class="fab fa-whatsapp"></i> Chat with Me</a>
+      </div>
+    </div>
+
+    <!-- Right: Image (BG on mobile) -->
+    <div class="hero-image-wrap">
+      <div class="orbit-ring"></div>
+      <div class="orbit-ring"></div>
+      <div class="profile-img-outer">
+        <div class="shimmer"></div>
+        <img src="assets/img/CEO.png" alt="Quarme Israel Narbi" class="profile-img"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="profile-img-placeholder" style="display:none;">
+          <i class="fas fa-user-tie"></i>
+        </div>
+      </div>
+      <div class="float-tag" style="top:20px;left:-50px;"><i class="fas fa-code"></i> Full Stack Dev</div>
+      <div class="float-tag" style="bottom:30px;right:-50px;"><i class="fas fa-palette"></i> Graphic Designer</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal-left">
+        <div class="img-shimmer-wrap">
+          <img src="assets/img/wq.jpg" alt="Quarme Israel Narbi" class="about-img"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="about-img-placeholder" style="display:none;">
+            <i class="fas fa-user-tie"></i>
+          </div>
+        </div>
+        <!-- AFTER -->
+        <div class="about-exp-badge">
+          <div class="num-row">
+            <div class="num counter-num" data-target="4">0</div>
+            <div class="num">+</div>
+          </div>
+          <div class="label">Years of Excellence</div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="section-tag">About Me</div>
+        <h2 class="section-title">Passionate Dev. <span class="accent-underline">Bold Builds.</span></h2>
+        <p style="color:var(--muted);font-size:0.93rem;margin-bottom:18px;line-height:1.8;">
+          I'm a passionate Full Stack Web Developer and Creative Graphic Designer from Ghana.
+          Founder of <strong style="color:var(--text);">Belykweb Solutions</strong> — where we craft tailored websites, intelligent digital solutions,
+          and bold brand visuals. I'm a programmer, a problem-solver, and a digital builder with a love for innovation.
+          Currently pursuing my Bachelor's degree at Accra Technical University (graduating July 2027).
+        </p>
+        <div class="about-info-grid">
+          <div class="info-item"><div class="info-label">Name</div><div class="info-value">Quarme Israel Narbi</div></div>
+          <div class="info-item"><div class="info-label">Email</div><div class="info-value">isrealnarbi@gmail.com</div></div>
+          <div class="info-item"><div class="info-label">Phone</div><div class="info-value">+233 598 296 093</div></div>
+          <div class="info-item"><div class="info-label">Location</div><div class="info-value">Dansoman, Accra – Ghana</div></div>
+          <div class="info-item"><div class="info-label">University</div><div class="info-value">Accra Technical University</div></div>
+          <div class="info-item"><div class="info-label">Degree</div><div class="info-value">Computer Science (BSc)</div></div>
+        </div>
+        <div class="skills-wrap" style="margin-top:20px;">
+          <p style="font-size:0.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;font-weight:600;">Tech Stack</p>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="skill-tag"><i class="fab fa-react"></i> React</span>
+            <span class="skill-tag"><i class="fab fa-php"></i> PHP</span>
+            <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+            <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+            <span class="skill-tag"><i class="fas fa-fire"></i> Firebase</span>
+            <span class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+            <span class="skill-tag"><i class="fas fa-envelope"></i> Web Mail</span>
+            <span class="skill-tag"><i class="fas fa-water"></i> Webflow</span>
+            <span class="skill-tag"><i class="fas fa-leaf"></i> Supabase</span>
+            <span class="skill-tag"><i class="fab fa-js-square"></i> TypeScript</span>
+          </div>
+        </div>
+        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://wa.me/233598296093" target="_blank" class="btn-primary-grad" style="font-size:.83rem;padding:10px 20px;">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="mailto:isrealnarbi@gmail.com" class="btn-outline-grad" style="font-size:.83rem;padding:10px 20px;">
+            <i class="fas fa-envelope"></i> Email Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">What I Do</div>
+      <h2 class="section-title">Services I Offer</h2>
+      <p class="section-subtitle">From concept to deployment — complete digital solutions tailored to your goals.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal-left" style="transition-delay:0s">
+        <div class="service-icon"><i class="fas fa-code"></i></div>
+        <h3>Web Development</h3>
+        <p>Custom websites built with modern tech stacks — fast, responsive, and scalable for any business size.</p>
+      </div>
+      <div class="service-card reveal-zoom" style="transition-delay:.07s">
+        <div class="service-icon"><i class="fas fa-palette"></i></div>
+        <h3>Graphic Design</h3>
+        <p>Bold brand identities, logos, social media graphics, and marketing materials that make you unforgettable.</p>
+      </div>
+      <div class="service-card reveal-drop" style="transition-delay:.14s">
+        <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+        <h3>E-Commerce Development</h3>
+        <p>Full-featured online stores with payment integration, inventory management, and seamless UX.</p>
+      </div>
+      <div class="service-card reveal-zoom" style="transition-delay:.21s">
+        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Web App & PWA</h3>
+        <p>Interactive web applications and Progressive Web Apps with real-time features and offline support.</p>
+      </div>
+      <div class="service-card reveal-left" style="transition-delay:.28s">
+        <div class="service-icon"><i class="fas fa-envelope-open-text"></i></div>
+        <h3>Web Mail Creation & Customization</h3>
+        <p>Professional business email setup, domain configuration, custom signatures for you and your whole team.</p>
+      </div>
+      <div class="service-card reveal-drop" style="transition-delay:.35s">
+        <div class="service-icon"><i class="fas fa-server"></i></div>
+        <h3>Web Hosting</h3>
+        <p>Reliable hosting solutions for businesses — fast servers, SSL certificates, and ongoing site management.</p>
+      </div>
+      <div class="service-card reveal-zoom" style="transition-delay:.42s">
+        <div class="service-icon"><i class="fas fa-tools"></i></div>
+        <h3>Website Maintenance</h3>
+        <p>Regular updates, performance optimization, security patches, and content management for your site.</p>
+      </div>
+      <div class="service-card reveal-left" style="transition-delay:.49s">
+        <div class="service-icon"><i class="fab fa-google"></i></div>
+        <h3>Google Business Profile & Local SEO</h3>
+        <p>Create and optimize your Google Business Profile to attract local customers and improve search visibility.</p>
+      </div>
+      <div class="service-card reveal-drop" style="transition-delay:.56s">
+        <div class="service-icon"><i class="fas fa-share-alt"></i></div>
+        <h3>Social Media Management</h3>
+        <p>Content creation, scheduling, and community management to grow your brand across all social platforms.</p>
+      </div>
+      <div class="service-card reveal-zoom" style="transition-delay:.63s">
+        <div class="service-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <h3>IT Masterclass</h3>
+        <p>Hands-on training in web development, graphic design, and tech skills — for beginners to advanced learners.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OFFER / DISCOUNT ===== -->
+<section id="offer">
+  <div class="container">
+    <div class="offer-card reveal-bounce">
+      <div>
+        <div class="offer-badge"><i class="fab fa-youtube" style="color:#ff0000"></i> Subscribe & Save</div>
+        <h2 class="offer-title">Get <span>10% OFF</span> Any Service When You Subscribe</h2>
+        <p class="offer-desc">
+          Contact me through my website for any service and subscribe to my YouTube channel — you'll automatically get 10% off your invoice!
+        </p>
+        <ul class="offer-steps">
+          <li><i class="fas fa-check-circle"></i> Subscribe to my YouTube channel</li>
+          <li><i class="fas fa-check-circle"></i> Send a message through the contact form below</li>
+          <li><i class="fas fa-check-circle"></i> Mention your YouTube username in the message</li>
+          <li><i class="fas fa-check-circle"></i> Receive 10% discount on your invoice</li>
+        </ul>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://www.youtube.com/@belykwebsolutions" target="_blank" class="btn-primary-grad">
+            <i class="fab fa-youtube"></i> Subscribe on YouTube
+          </a>
+          <a href="#contact" class="btn-outline-grad"><i class="fas fa-arrow-down"></i> Claim Offer</a>
+        </div>
+      </div>
+      <div style="text-align:left;">
+        <div class="offer-big-num" id="offerCounter">0%</div>
+        <div class="offer-num-label">Discount for<br>Subscribers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACHIEVEMENTS ===== -->
+<section id="achievements">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Milestones</div>
+      <h2 class="section-title">My Achievements</h2>
+      <p class="section-subtitle">Numbers that reflect years of dedication and client trust across 4 countries.</p>
+    </div>
+    <div class="ach-grid">
+      <div class="ach-card reveal-left">
+        <div class="ach-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+        <div>
+          <div class="ach-num"><span class="counter-num" data-target="50">0</span>+</div>
+          <div class="ach-label">Projects Completed</div>
+        </div>
+      </div>
+      <div class="ach-card reveal-right">
+        <div class="ach-icon-wrap"><i class="fas fa-users"></i></div>
+        <div>
+          <div class="ach-num"><span class="counter-num" data-target="400">0</span>+</div>
+          <div class="ach-label">Happy Clients</div>
+        </div>
+      </div>
+      <div class="ach-card reveal-left" style="transition-delay:.1s">
+        <div class="ach-icon-wrap"><i class="fas fa-globe"></i></div>
+        <div>
+          <div class="ach-num"><span class="counter-num" data-target="4">0</span></div>
+          <div class="ach-label">Countries Served</div>
+        </div>
+      </div>
+      <div class="ach-card reveal-right" style="transition-delay:.1s">
+        <div class="ach-icon-wrap"><i class="fas fa-calendar-alt"></i></div>
+        <div>
+          <div class="ach-num"><span class="counter-num" data-target="4">0</span>+</div>
+          <div class="ach-label">Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="work">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Portfolio</div>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">Websites, web apps, and digital platforms built for clients across Ghana, UK, USA, and Nigeria.</p>
+    </div>
+    <div class="projects-filter reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="website">Websites</button>
+      <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+      <button class="filter-btn" data-filter="webapp">Web Apps</button>
+      <button class="filter-btn" data-filter="ngo">NGO/Foundation</button>
+      <button class="filter-btn" data-filter="tech">Tech Company</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+    <!-- Existing Project 1 -->
+    <a class="project-card reveal-zoom" data-cat="website" href="https://kailaplaceevents.com/" target="_blank" style="transition-delay:0s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/Kaila-place.png" alt="Kaile Place Events">
+      </div>
+      <div class="project-body">
+        <div class="project-category">Event Website · Ghana</div>
+        <div class="project-title">Kaile Place Events</div>
+        <p class="project-desc">Vibrant event management website showcasing services, gallery, and booking system.</p>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <!-- Existing Project 2 -->
+    <a class="project-card reveal-left" data-cat="webapp" href="https://loco1ventures.com/" target="_blank" style="transition-delay:.06s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/Loco1.png" alt="Loco1 Ventures">
+      </div>
+      <div class="project-body">
+        <div class="project-category">Web App · Ghana</div>
+        <div class="project-title">Loco1 Ventures</div>
+        <p class="project-desc">Full-featured web application with dynamic dashboards and business workflow automation.</p>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <!-- Existing Project 3 -->
+    <a class="project-card reveal-drop" data-cat="website" href="https://bisbecproperties.com/" target="_blank" style="transition-delay:.12s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/Bisbec.png" alt="Bisbek Properties">
+      </div>
+      <div class="project-body">
+        <div class="project-category">Real Estate · Ghana</div>
+        <div class="project-title">Bisbec Properties</div>
+        <p class="project-desc">Real estate platform with property listings, search filters, and agent contact system.</p>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <!-- Existing Project 4 -->
+    <a class="project-card reveal-zoom" data-cat="website" href="https://accessaproperties.com/" target="_blank" style="transition-delay:.18s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/Access.png" alt="Access A Properties">
+      </div>
+      <div class="project-body">
+        <div class="project-category">Real Estate · Ghana</div>
+        <div class="project-title">Access A Properties</div>
+        <p class="project-desc">Property agency website with listings, galleries, and inquiry management system.</p>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <!-- Existing Project 5 -->
+    <a class="project-card reveal-left" data-cat="website" href="https://kaneakasaconstructionltd.com/index.html" target="_blank" style="transition-delay:.24s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/Kasa.png" alt="Kanea Kasa Construction">
+      </div>
+      <div class="project-body">
+        <div class="project-category">Construction · Ghana</div>
+        <div class="project-title">Kanea Kasa Construction Ltd.</div>
+        <p class="project-desc">Corporate website showcasing construction portfolio and services for this growing firm.</p>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <!-- Existing Project 6 -->
+    <a class="project-card reveal-drop" data-cat="ecommerce" href="https://bigdaveshop.com/" target="_blank" style="transition-delay:.30s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/BigDave.png" alt="BigDave Shop">
+      </div>
+      <div class="project-body">
+        <div class="project-category">E-Commerce · Ghana</div>
+        <div class="project-title">BigDave Shop</div>
+        <p class="project-desc">Fully operational e-commerce store with product catalog, cart system, and payment gateway.</p>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <!-- Existing Project 7 -->
+    <a class="project-card reveal-zoom" data-cat="ngo" href="https://thenextlevelgen.com/" target="_blank" style="transition-delay:.36s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/Next-levelGen.png" alt="Next Level Generation">
+      </div>
+      <div class="project-body">
+        <div class="project-category">NGO Website · Ghana</div>
+        <div class="project-title">Next Level Generation</div>
+        <p class="project-desc">Mission-driven NGO website communicating vision, programs, and community impact.</p>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <!-- Existing Project 8 - Updated to Fine Home Cleaning -->
+    <a class="project-card reveal-left" data-cat="website" href="https://finehomeclean.com/" target="_blank" style="transition-delay:.42s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/fine_Home.png" alt="Fine Home Cleaning - UK Cleaning Company">
+      </div>
+      <div class="project-body">
+        <div class="project-category">Cleaning Services · UK</div>
+        <div class="project-title">Fine Home Cleaning</div>
+        <p class="project-desc">Professional cleaning company website based in the UK. Showcasing residential and commercial cleaning services, booking system, and service areas.</p>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <!-- Existing Project 9 -->
+    <a class="project-card reveal-drop" data-cat="ecommerce" href="https://eleshopgh.com/" target="_blank" style="transition-delay:.48s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/Eleshop.png" alt="Ele shop">
+      </div>
+      <div class="project-body">
+        <div class="project-category">E-Commerce · Ghana</div>
+        <div class="project-title">Ele shop</div>
+        <p class="project-desc">Modern e-commerce platform with advanced filtering, user accounts, and seamless payment.</p>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <!-- Existing Project 10 -->
+    <a class="project-card reveal-zoom" data-cat="tech" href="https://primetechpinnacle.com/" target="_blank" style="transition-delay:.54s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/primetech.png" alt="Prime Tech Pinnacle">
+      </div>
+      <div class="project-body">
+        <div class="project-category">Tech Company · Ghana</div>
+        <div class="project-title">Prime Tech Pinnacle</div>
+        <p class="project-desc">Corporate company website built to showcase services, team, and digital solutions portfolio.</p>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <!-- Existing Project 11 -->
+    <a class="project-card reveal-left" data-cat="ngo" href="https://www.primeharmonyfoundation.com/" target="_blank" style="transition-delay:.60s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/prime-harmony.png" alt="Prime Harmony Foundation">
+      </div>
+      <div class="project-body">
+        <div class="project-category">NGO Foundation · Ghana</div>
+        <div class="project-title">Prime Harmony Foundation</div>
+        <p class="project-desc">Foundation website built to amplify their mission, events, and community outreach programs.</p>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <!-- Existing Project 12 -->
+    <a class="project-card reveal-drop" data-cat="website" href="https://transitionshousingcic.org/" target="_blank" style="transition-delay:.66s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/transition.png" alt="Transition Housing CIC">
+      </div>
+      <div class="project-body">
+        <div class="project-category">Care Services · UK</div>
+        <div class="project-title">Transition Housing CIC</div>
+        <p class="project-desc">UK-based care & home services website for Transition Housing CIC — built for trust and accessibility.</p>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <!-- NEW PROJECT 13: Brainy Consult -->
+    <a class="project-card reveal-zoom" data-cat="website" href="https://www.brainyconsult.com/" target="_blank" style="transition-delay:.72s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/Brainy.png" alt="Brainy Consult">
+      </div>
+      <div class="project-body">
+        <div class="project-category">Book Store · Ghana</div>
+        <div class="project-title">Brainy Consult</div>
+        <p class="project-desc">Author website and online bookstore with integrated Whatsapp API for book sales and digital downloads.</p>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <!-- NEW PROJECT 14: African-Based Restaurant -->
+    <a class="project-card reveal-left" data-cat="website" href="https://new.biwadgroup.com/" target="_blank" style="transition-delay:.78s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/Africanbase.png" alt="African-Based Restaurant">
+      </div>
+      <div class="project-body">
+        <div class="project-category">Restaurant Website · UK</div>
+        <div class="project-title">African-Based Restaurant</div>
+        <p class="project-desc">Modern restaurant website showcasing menu, reservations, location, and authentic African cuisine experience in the UK.</p>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+
+    <!-- NEW PROJECT 15: African Food App -->
+    <a class="project-card reveal-right" data-cat="webapp" href="https://new.biwadgroup.com/ordering_section/index.html" target="_blank" style="transition-delay:.84s">
+      <div class="project-thumb">
+        <img src="assets/web-pros/foodApp.png" alt="African Food App">
+      </div>
+      <div class="project-body">
+        <div class="project-category">Food Ordering App · UK</div>
+        <div class="project-title">African Food App</div>
+        <p class="project-desc">Full-featured food ordering web app with real-time cart, payment integration, and order tracking system.</p>
+        <span class="project-link">Visit App <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+  </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="section-header reveal">
+      <div class="section-tag">Journey</div>
+      <h2 class="section-title">Education & Experience</h2>
+    </div>
+    <div class="exp-grid">
+      <div class="reveal-left">
+        <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;margin-bottom:26px;color:var(--muted);">Education</h3>
+        <div class="timeline">
+          <div class="timeline-item reveal-zoom">
+            <div class="timeline-date">2027 (Expected)</div>
+            <div class="timeline-title">BTech Computer Science</div>
+            <div class="timeline-company">Accra Technical University, Ghana</div>
+            <div class="timeline-desc">Pursuing Bachelor's degree in Computer Science. Class Organizer (2023–present). Expected: July 30, 2027.</div>
+          </div>
+          <div class="timeline-item reveal-zoom" style="transition-delay:.1s">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-title">HND — Computer Science</div>
+            <div class="timeline-company">Accra Technical University, Ghana</div>
+            <div class="timeline-desc">Completed Higher National Diploma in Computer Science with focus on web technologies and software development.</div>
+          </div>
+          <div class="timeline-item reveal-zoom" style="transition-delay:.2s">
+            <div class="timeline-date">2020</div>
+            <div class="timeline-title">General Art (E-Maths & E-ICT)</div>
+            <div class="timeline-company">Ada Senior High School, Ghana</div>
+            <div class="timeline-desc">Completed General Arts program at Ada Senior High School with focus on Elective Mathematics (E-Maths) and Elective ICT (E-ICT).</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;margin-bottom:26px;color:var(--muted);">Experience</h3>
+        <div class="timeline">
+          <div class="timeline-item reveal-zoom">
+            <div class="timeline-date">2022 – Present</div>
+            <div class="timeline-title">CEO & Lead Developer</div>
+            <div class="timeline-company">Belykweb Solutions, Accra — Ghana & UK</div>
+            <div class="timeline-desc">Founded Belykweb Solutions — delivering web development, graphic design, e-commerce, and IT training to 400+ clients across Ghana, UK, USA, and Nigeria.</div>
+          </div>
+          <div class="timeline-item reveal-zoom" style="transition-delay:.1s">
+            <div class="timeline-date">2022 – Present</div>
+            <div class="timeline-title">Freelance Web Developer & Designer</div>
+            <div class="timeline-company">Independent – Ghana, UK, USA, Nigeria</div>
+            <div class="timeline-desc">Built 50+ projects for SMEs, NGOs, and entrepreneurs spanning real estate, events, construction, e-commerce, and corporate sectors.</div>
+          </div>
+          <div class="timeline-item reveal-zoom" style="transition-delay:.2s">
+            <div class="timeline-date">2024 – Present</div>
+            <div class="timeline-title">IT Trainer & Educator</div>
+            <div class="timeline-company">Belykweb Tech Academy</div>
+            <div class="timeline-desc">Running hands-on IT masterclasses covering web development, graphic design, and digital skills for students and professionals.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Client Feedback</div>
+      <h2 class="section-title">Reviews & <span class="accent-underline">Testimonials</span></h2>
+      <p class="section-subtitle">See what clients are saying about working with Belykweb Solutions — or share your own experience.</p>
+    </div>
+    <div class="reviews-cta-wrap">
+      <a class="review-cta-card reveal-left"
+        href="https://g.page/r/CTn8GiPr4VaIEBM/review"
+        target="_blank">
+        <div class="review-cta-icon">⭐</div>
+        <div class="stars">★★★★★</div>
+        <div class="review-cta-title">Leave a Review</div>
+        <div class="review-cta-desc">Had a great experience? Share your feedback on Google and help others discover Belykweb Solutions.</div>
+        <span class="btn-primary-grad" style="font-size:.82rem;padding:9px 20px;">
+          <i class="fab fa-google"></i> Write a Review
+        </span>
+      </a>
+      <a class="review-cta-card reveal-right"
+        href="https://share.google/tHkShA0cAJeo2Eagt"
+        target="_blank">
+        <div class="review-cta-icon">🏢</div>
+        <div class="stars" style="color:var(--accent);">★★★★★</div>
+        <div class="review-cta-title">View Business Profile</div>
+        <div class="review-cta-desc">Check out Belykweb Solutions on Google — see our portfolio, ratings, location, and hours.</div>
+        <span class="btn-outline-grad" style="font-size:.82rem;padding:9px 20px;">
+          <i class="fab fa-google"></i> View on Google
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="section-title">Let's Build Something <span class="accent-underline">Amazing</span></h2>
+      <p class="section-subtitle">Ready to start a project? Send a message and I'll respond within 24 hours.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div>
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="contact-detail-label">Location</div>
+            <div class="contact-detail-value">Dansoman, Accra – Ghana</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="contact-detail-label">Location</div>
+            <div class="contact-detail-value">Nottingham, UK – Opening Soon</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="contact-detail-label">Phone / WhatsApp</div>
+            <div class="contact-detail-value">+233 598 296 093</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact-detail-label">Personal Email</div>
+            <div class="contact-detail-value">isrealnarbi@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact-detail-label">Personal Email</div>
+            <div class="contact-detail-value">belykweb@gmail.com</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact-detail-label">Business Email</div>
+            <div class="contact-detail-value">israel@belykwebsolutions.com</div>
+          </div>
+        </div>
+        <div class="contact-social-row">
+          <a href="https://web.facebook.com/profile.php?id=61571704717819" target="_blank" class="social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/belykwebsolutions/" target="_blank" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/belykweb-solutions-b84386250/" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/israelnarbi" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.tiktok.com/@belykwebsolutions" target="_blank" class="social-btn" title="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.youtube.com/@belykwebsolutions" target="_blank" class="social-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/233598296093" target="_blank" class="social-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" placeholder="John" id="fname">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" placeholder="Doe" id="lname">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="john@example.com" id="cemail">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-input" placeholder="+233 ..." id="cphone">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Service Interested In</label>
+          <select class="form-input" id="cservice">
+            <option value="">Select a service...</option>
+            <option>Web Development</option>
+            <option>Graphic Design</option>
+            <option>E-Commerce Development</option>
+            <option>Web App / PWA</option>
+            <option>Web Mail Creation & Customization</option>
+            <option>Web Hosting</option>
+            <option>Website Maintenance</option>
+            <option>Google Business Profile & Local SEO</option>
+            <option>Social Media Management</option>
+            <option>IT Masterclass</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-input" placeholder="Tell me about your project..." id="cmessage"></textarea>
+        </div>
+        <div class="subscribe-row">
+          <input type="checkbox" id="ytSub">
+          <label for="ytSub">I have subscribed to the <a href="https://www.youtube.com/@belykwebsolutions" target="_blank">YouTube channel</a> — please apply my 10% discount!</label>
+        </div>
+        <button class="submit-btn" onclick="submitContact()">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+        <div class="form-status" id="formStatus"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Belykweb Solutions</div>
+    <p class="footer-copy">© <span id="year"></span> - Quarme Israel Narbi. All Rights Reserved. | Powered by <span><a href="https://belykwebsolutions.com" style="color: azure; text-decoration: none;" target="_blank">Belykweb Solutions</a></span></p>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<a href="#hero" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
